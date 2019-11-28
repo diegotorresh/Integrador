@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Diabetes from './Diabetes';
 import './css/login.css';
+import './css/menu.css';
 
 
 class Menu extends Component{
@@ -44,6 +45,28 @@ class Menu extends Component{
 
             return(
                 <div className="body">
+        
+                    <div class="container">
+                    
+                        <div class="card">
+                            <img src="images/oms.jpg"/>
+                            <p>Según el Ministerio de Salud, de los 1,4 millones de peruanos que tiene diabetes actualmente, sólo la mitad estaría diagnosticada, convirtiéndose en la tercera causa de muerte en el país.</p>
+                            <a href="https://www.who.int/es">Sitio web</a>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="img/img2.jpg"/>
+                            <p>La diabetes es una enfermedad crónica que aparece cuando el páncreas no produce insulina suficiente o cuando el organismo no utiliza eficazmente la insulina que produce.</p>
+                            <a href="/EncDiabetes">Realizar encuesta</a>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="img/img3.jpg"/>
+                            <p>La anemia es una enfermedad crónica no transmisible que tiene como una de sus principales causas la insuficiencia de hierro (mineral que ayuda a producir glóbulos rojos) en la sangre.</p>
+                            <a href="/EncAnemia">Realizar encuesta</a>
+                        </div>
+        
+                    </div>
                     <h1><b>OMS</b></h1>{enfermg}<br/>
                     <h1><b>Diabetes</b></h1>{enferm2}<br/>{enferm3}<br/>
                     <h1><b>Tipos de Diabetes</b></h1>- {enferm13}<br/>- {enferm14}<br/>- {enferm15}<br/>
@@ -58,7 +81,7 @@ class Menu extends Component{
                         <a className="login100-form-btn" href="/EncAnemia">
                             Realizar encuesta para la Anemia
                         </a>
-                    </div>
+                    </div> 
                 </div>
                 );
         }

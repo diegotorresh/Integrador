@@ -6,6 +6,8 @@ import Registro from './componentes/Registro';
 import EncDiabetes from './componentes/EncDiabetes';
 import EncAnemia from './componentes/EncAnemia';
 import Menu from './componentes/Menu';
+import Grafica from './componentes/Chart';
+
 import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
 
 class App extends Component {
@@ -30,6 +32,10 @@ class App extends Component {
         
         <Route path="/Menu" enf="asdfasdf">
         <Menu/>
+        </Route>
+
+        <Route path="/Grafica">
+        <Grafica/>
         </Route>
 
       </Router>

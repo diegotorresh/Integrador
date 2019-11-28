@@ -5,7 +5,49 @@ import './css/encuestas.css';
 import './css/login.css'
 
 class EncAnemia extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+            respuestasA:[],
+            isFetch:true
+        }
+    }
+
+    componentWillMount(){
+        fetch('https://cors-anywhere.herokuapp.com/https://proyectoin.herokuapp.com/apis/respuestas')
+        .then((response) => {
+            return response.json()
+        })
+        .then((resp)=>{
+            this.setState({respuestasA:resp, isFetch: false})
+        })
+    }
+    
     render(){
+        if(this.state.isFetch){
+            return(
+                <div className="body"><span className="login100-form-title">
+                Cargando Encuesta sobre la anemia
+              </span></div>
+            );
+        }
+
+        const respu21=this.state.respuestasA[21].resp1
+        const respu22=this.state.respuestasA[22].resp1
+        const respu23=this.state.respuestasA[23].resp1
+        const respu24=this.state.respuestasA[24].resp1
+        const respu25=this.state.respuestasA[25].resp1
+        const respu26=this.state.respuestasA[26].resp1
+        const respu27=this.state.respuestasA[27].resp1
+        const respu28=this.state.respuestasA[28].resp1
+        const respu29=this.state.respuestasA[29].resp1
+        const respu30=this.state.respuestasA[30].resp1
+        const respu31=this.state.respuestasA[31].resp1
+        const respu32=this.state.respuestasA[32].resp1
+        const respu33=this.state.respuestasA[33].resp1
+        const respu34=this.state.respuestasA[34].resp1
+        const respu35=this.state.respuestasA[35].resp1
+
         return(
             <div className="body">
                 <div className="container">
@@ -18,19 +60,19 @@ class EncAnemia extends Component{
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p1a1" className="styled" type="checkbox"   />
                                                     <label for="p1a1">
-                                                            Es una afección por lo cual la hemoglobina está disminuida en los glóbulos rojos, teniendo como resultado<br/> deficiencia de hierro y vitaminas.
+                                                        {respu21}
                                                     </label>
                                                 </div>
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p1a2" className="styled" type="checkbox"   />
                                                     <label for="p1a2">
-                                                            Es una enfermedad y transtorno en la sangre que se caracteriza por la baja produccion de globulos blancos,<br/> los cuales combaten a los germenes,virus, bacterias.
+                                                    {respu22}
                                                     </label>
                                             </div>            
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p1a3" className="styled" type="checkbox"   />
                                                 <label for="p1a3">
-                                                        Es una enfermedad hereditaria que afecta al metabolismo lo cual hace que se acumule el hierro de manera excesiva<br/> y estos afecten lor organos.
+                                                {respu23}
                                                 </label>
                                             </div>  
                                             ----------------------------------------------------------------------------------
@@ -38,19 +80,19 @@ class EncAnemia extends Component{
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p2a1" className="styled" type="checkbox"   />
                                                     <label for="p2a1">
-                                                            A las personas que tienen una mala alimentación.
+                                                    {respu24}
                                                     </label>
                                                 </div>
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p2a2" className="styled" type="checkbox"   />
                                                     <label for="p2a2">
-                                                            Frecuenta en las  personas que no hacen actividad física, y no tienen una buena calidad de sueño.
+                                                    {respu25}
                                                     </label>
                                             </div>            
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p2a3" className="styled" type="checkbox"   />
                                                 <label for="p2a3">
-                                                        Solo se presenta en niños que no tienen una buena rutina alimenticia.
+                                                    {respu26}
                                                 </label>
                                             </div>
                                             ---------------------------------------------------------------------------------- 
@@ -58,19 +100,19 @@ class EncAnemia extends Component{
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p3a1" className="styled" type="checkbox"   />
                                                     <label for="p3a1">
-                                                            Fatiga extrema, piel pálida, dolor de cabeza o mareos, dolor en el pecho.
+                                                    {respu27}
                                                     </label>
                                                 </div>
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p3a2" className="styled" type="checkbox"   />
                                                     <label for="p3a2">
-                                                            Malestar general, debilidad, vértigo, cambios de humor.
+                                                    {respu28}
                                                     </label>
                                             </div>            
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p3a3" className="styled" type="checkbox"   />
                                                 <label for="p3a3">
-                                                        Dolor abdominal, falta de energía, perdida de vello corporal, perdida de peso.
+                                                    {respu29}
                                                 </label>
                                             </div>
                                             ---------------------------------------------------------------------------------- 
@@ -78,19 +120,19 @@ class EncAnemia extends Component{
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p4a1" className="styled" type="checkbox"   />
                                                     <label for="p4a1">
-                                                            Cansancio intenso,problemas cardiacos, muerte, complicaciones en el embarazo.
+                                                    {respu30}
                                                     </label>
                                             </div>
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                     <input id="p4a2" className="styled" type="checkbox"   />
                                                         <label for="p4a2">
-                                                                Sangrado intenso, dolores musculares, fatiga extrema.
+                                                        {respu31}
                                                         </label>
                                             </div>
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                     <input id="p4a3" className="styled" type="checkbox"   />
                                                         <label for="p4a3">
-                                                                Anomalías en las células de la sangre, fiebre intensa, baja defensa del cuerpo.
+                                                        {respu32}
                                                         </label>
                                             </div> 
                                             ---------------------------------------------------------------------------------- 
@@ -98,19 +140,19 @@ class EncAnemia extends Component{
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p5a1" className="styled" type="checkbox"   />
                                                     <label for="p5a1">
-                                                            Evitar a las personas fumadoras es decir cualquier producto que pueda irritar los pulmones.
+                                                    {respu33}
                                                     </label>
                                                 </div>
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p5a2" className="styled" type="checkbox"   />
                                                     <label for="p5a2">
-                                                            Consumir alimentos ricos en hierro, como carnes, mariscos, hígado, frutas secos, etc.
+                                                    {respu34}
                                                     </label>
                                             </div>            
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p5a3" className="styled" type="checkbox"   />
                                                 <label for="p5a3">
-                                                        Evitar consumir alimentos inorgánicos y no usar cubiertos o artefactos de uso compartido en lugares públicos.
+                                                {respu35}
                                                 </label>
                                             </div>
                                     </div>

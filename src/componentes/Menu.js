@@ -45,24 +45,51 @@ class Menu extends Component{
 
             return(
                 <div className="body">
+                    <div id="header">
+                        <div class="left">
+                            <ul class="nav">
+                                <li><a href="">Inicio</a></li>
+                                <li><a href="">Diabetes</a>
+                                    <ul>
+                                        <li><a href="/EncDiabetes">Encuesta de Conocimiento</a></li>
+                                        <li><a href="/TestDiabetes">Test</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Anemia</a>
+                                    <ul>
+                                        <li><a href="/EncAnemia">Encuesta de Conocimiento</a></li>
+                                        <li><a href="/TestAnemia">Test</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Idioma</a>
+                                    <ul>
+                                        <li><a href="">Quechua</a></li>
+                                        <li><a href="/Menu">Español</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/Login">Iniciar Sesion</a></li>
+                                <li><a href="/Registro">Registrarse</a></li>
+                            </ul>
+                        </div>
+		            </div>
         
                     <div class="container">
                     
                         <div class="card">
                             <img src="images/oms.jpg"/>
-                            <p>Según el Ministerio de Salud, de los 1,4 millones de peruanos que tiene diabetes actualmente, sólo la mitad estaría diagnosticada, convirtiéndose en la tercera causa de muerte en el país.</p>
+                            <p>Según el Ministerio de Salud, de los 1,4 millones de peruanos que tiene diabetes actualmente, sólo la mitad estaría diagnosticada, convirtiéndose en la tercera causa de muerte en el país.<a href="/OMS">Leer mas</a></p>
                             <a href="https://www.who.int/es">Sitio web</a>
                         </div>
                         
                         <div class="card">
                             <img src="img/img2.jpg"/>
-                            <p>La diabetes es una enfermedad crónica que aparece cuando el páncreas no produce insulina suficiente o cuando el organismo no utiliza eficazmente la insulina que produce.</p>
+                            <p>La diabetes es una enfermedad crónica que aparece cuando el páncreas no produce insulina suficiente o cuando el organismo no utiliza eficazmente la insulina que produce.<a href="/Diabetes">Leer mas.</a></p>
                             <a href="/EncDiabetes">Realizar encuesta</a>
                         </div>
                         
                         <div class="card">
                             <img src="img/img3.jpg"/>
-                            <p>La anemia es una enfermedad crónica no transmisible que tiene como una de sus principales causas la insuficiencia de hierro (mineral que ayuda a producir glóbulos rojos) en la sangre.</p>
+                            <p>La anemia es una enfermedad crónica no transmisible que tiene como una de sus principales causas la insuficiencia de hierro (mineral que produce glóbulos rojos) en la sangre.<a href="/Anemia">Leer mas.</a></p>
                             <a href="/EncAnemia">Realizar encuesta</a>
                         </div>
         

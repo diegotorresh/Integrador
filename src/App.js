@@ -7,6 +7,9 @@ import EncDiabetes from './componentes/EncDiabetes';
 import EncAnemia from './componentes/EncAnemia';
 import Menu from './componentes/Menu';
 import Grafica from './componentes/Chart';
+import Anemia from './componentes/anemia';
+import Diabetes from './componentes/Diabetes';
+import OMS from './componentes/Oms';
 
 import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
 
@@ -36,6 +39,18 @@ class App extends Component {
 
         <Route path="/Grafica">
         <Grafica/>
+        </Route>
+
+        <Route path="/Diabetes">
+          <Diabetes/>
+        </Route>
+
+        <Route path="/Anemia">
+          <Anemia/>
+        </Route>
+
+        <Route path="/OMS">
+          <OMS/>
         </Route>
 
       </Router>

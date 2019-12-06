@@ -29,18 +29,8 @@ class Diabetes extends Component{
               </span></div>
             );
         }
-<<<<<<< HEAD
         const diab3 = this.state.diabetes[3].info
         const diab2 = this.state.diabetes[2].info
-=======
-        const diab1 = this.state.diabetes[1].info
-        const diab3 = this.state.diabetes[3].info
-        const diabg = this.state.diabetes[0].info
-        const diab2 = this.state.diabetes[2].info
-        const diab4 = this.state.diabetes[4].info
-        const diab5 = this.state.diabetes[5].info
-        const diab6 = this.state.diabetes[6].info
->>>>>>> cd9762bffb5b5f9aebca7c225f821a76a1cf38e0
         const diab12 = this.state.diabetes[12].info
         const diab13 = this.state.diabetes[13].info
         const diab14 = this.state.diabetes[14].info

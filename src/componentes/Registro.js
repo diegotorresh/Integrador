@@ -73,7 +73,9 @@ class Registro extends Component{
         return(
             <div className="limiter">
             <div className="container-login100">
-                <div className="login100-more" style={{backgroundImage: 'url("images/ten.png")'}} />
+                <div className="login100-more">
+                    <img src={require('./images/cultura.png')}alt="IMG" />
+                </div>
                 <div className="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
                     <form className="login100-form validate-form" onSubmit={this.registrarUsuario}>
                     <span className="login100-form-title p-b-59">

@@ -67,7 +67,7 @@ class Chart extends Component{
                     }}
                 />
                 <div className="container-login100-form-btn">
-                    <a className="login100-form-btn" href="/Menu">
+                    <a className="login100-form-btn" href="/MenuI">
                     Regresar al menú.
                     </a>
                 </div>  

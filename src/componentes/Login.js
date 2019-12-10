@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {PostData} from '../componentes/services/PostData';
 import {Redirect} from 'react-router-dom';
+import axios from 'axios';
 import './css/login.css'
 
 class Login extends Component{
@@ -8,76 +8,71 @@ class Login extends Component{
     constructor(props){
       super(props);
       this.state ={
-        usuario: '',
-        contraseña: '',
-        redirect: false
+        usuario:'',
+        contraseña:''
       }
-      this.login = this.login.bind(this);
-      this.onChange = this.onChange.bind(this);
+      this.onChange=this.onChange.bind(this);
+      this.Validacion=this.Validacion.bind(this);
     }
 
-    login(){
-      if(this.state.usuario && this.state.contraseña){
-        PostData('login', this.state).then((result) =>{
-          let responseJSON = result;
-          console.log(responseJSON);
-          if(responseJSON.userData){
-           sessionStorage.setItem('userData', responseJSON)
-           this.setState({redirect: true});
-          }
-          else{
-            console.log("Login error");
-          }
-        });
+    Validacion(e){
+      e.preventDefault();
+
+      const form = e.target
+      const data = {
+        "usuario": form.usuario.value,
+        "contraseña": form.contraseña.value
       }
-      
+
+      axios.post('https://cors-anywhere.herokuapp.com/https://proyectoin.herokuapp.com/sistema/Login', data)
+      .then(r => {
+        localStorage.setItem('token', r.data.token)
+        window.location = "/MenuI"
+      })
+      .catch(e=> console.log(e.response))
     }
 
     onChange(e){
       this.setState({[e.target.name]: e.target.value})
-    }
+  }
     render(){
 
-      if(this.state.redirect){
-        return(<Redirect to={'/menu'}/>)
-      }
+      const {usuario, contraseña} = this.state
 
 
-        return(
+      return(
             <div className="limiter">
             <div className="container-login100">
               <div className="wrap-login100">
                 <div className="login100-pic js-tilt" data-tilt>
                   <img src={require('./images/cultura.png')}alt="IMG" />
                 </div>
-                <form className="login100-form validate-form">
+                <form className="login100-form validate-form" method="POST" onSubmit={this.Validacion}>
                   <span className="login100-form-title">
                     Iniciar Sesión
                   </span>
                   <div className="wrap-input100 validate-input" data-validate="Usuario obligatorio">
-                    <input className="input100" type="text" name="usuario" placeholder="Usuario" onChange={this.onChange}/>
+                    <input className="input100" type="text" id="usuario" value={usuario} name="usuario" placeholder="Usuario" ref={this.usuRef} onChange={this.onChange}/>
                     <span className="focus-input100" />
                     <span className="symbol-input100">
-                      <i className="fa fa-envelope" aria-hidden="true" />
+                      
                     </span>
                   </div>
                   <div className="wrap-input100 validate-input" data-validate="Contraseña obligatoria">
-                    <input className="input100" type="password" name="contraseña" placeholder="Contraseña" onChange={this.onChange}/>
+                    <input className="input100" type="password" id="contraseña" value={contraseña} name="contraseña" placeholder="Contraseña" ref={this.passRef} onChange={this.onChange}/>
                     <span className="focus-input100" />
                     <span className="symbol-input100">
-                      <i className="fa fa-lock" aria-hidden="true" />
+                      
                     </span>
                   </div>
-                  <div className="container-login100-form-btn">
-                    <div className="login100-form-btn">
-                      <input type="submit" className="button" value="Ingresar" onClick={this.login}/>
-                    </div>
+                  <div className="home-content__buttons">
+                      <input type="submit" className="smoothscroll btn btn--stroke" value="Ingresar" />
                   </div>
       
-                  <div className="container-login100-form-btn">
-                    <a className="login100-form-btn" href="/Registro">
-                      Registrarse
-                    </a>
+                  <div className="home-content__buttons">
+                                    <a href="/Registro" className="smoothscroll btn btn--stroke">
+                                        Registrarse
+                                    </a>
                   </div>
                 </form>
               </div>

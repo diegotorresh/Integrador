@@ -120,10 +120,10 @@ class MenuI extends Component{
                             <p>-{anem5}</p>
                             <p>-{anem6}</p>
                             <div class="home-content__buttons">
-                                    <a href="/Login" class="smoothscroll btn btn--stroke">
+                                    <a href="/EncAnemia" class="smoothscroll btn btn--stroke">
                                         Realizar Encuesta
                                     </a>
-                                    <a href="/Login" class="smoothscroll btn btn--stroke">
+                                    <a href="/TestAnemia" class="smoothscroll btn btn--stroke">
                                         Realizar Test
                                     </a>
                                 </div>
@@ -142,10 +142,10 @@ class MenuI extends Component{
                             <p>-{diab13}</p>
                             <p>-{diab14}</p>
                             <div class="home-content__buttons">
-                                    <a href="/Login" class="smoothscroll btn btn--stroke">
+                                    <a href="/EncDiabetes" class="smoothscroll btn btn--stroke">
                                         Realizar Encuesta
                                     </a>
-                                    <a href="/Login" class="smoothscroll btn btn--stroke">
+                                    <a href="/TestDiabetes" class="smoothscroll btn btn--stroke">
                                         Realizar Test
                                     </a>
                                 </div>

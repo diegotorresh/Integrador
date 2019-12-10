@@ -8,13 +8,13 @@ class EncAnemia extends Component{
     constructor(props){
         super(props);
         this.state={
-            respuestasA:[],
+           respuestasA:[],
             isFetch:true
         }
     }
 
     componentWillMount(){
-        fetch('https://cors-anywhere.herokuapp.com/https://proyectoin.herokuapp.com/apis/respuestas')
+        fetch('https://cors-anywhere.herokuapp.com/https://proyectoin.herokuapp.com/apis/respuestasanemia')
         .then((response) => {
             return response.json()
         })
@@ -32,21 +32,25 @@ class EncAnemia extends Component{
             );
         }
 
-        const respu21=this.state.respuestasA[21].resp1
-        const respu22=this.state.respuestasA[22].resp1
-        const respu23=this.state.respuestasA[23].resp1
-        const respu24=this.state.respuestasA[24].resp1
-        const respu25=this.state.respuestasA[25].resp1
-        const respu26=this.state.respuestasA[26].resp1
-        const respu27=this.state.respuestasA[27].resp1
-        const respu28=this.state.respuestasA[28].resp1
-        const respu29=this.state.respuestasA[29].resp1
-        const respu30=this.state.respuestasA[30].resp1
-        const respu31=this.state.respuestasA[31].resp1
-        const respu32=this.state.respuestasA[32].resp1
-        const respu33=this.state.respuestasA[33].resp1
-        const respu34=this.state.respuestasA[34].resp1
-        const respu35=this.state.respuestasA[35].resp1
+        const respu21=this.state.respuestasA[0].respuesta
+        const respu22=this.state.respuestasA[1].respuesta
+        const respu23=this.state.respuestasA[2].respuesta
+        const respu24=this.state.respuestasA[3].respuesta
+        const respu25=this.state.respuestasA[4].respuesta
+        const respu26=this.state.respuestasA[5].respuesta
+        const respu27=this.state.respuestasA[6].respuesta
+        const respu28=this.state.respuestasA[7].respuesta
+        const respu29=this.state.respuestasA[8].respuesta
+        const respu30=this.state.respuestasA[9].respuesta
+        const respu31=this.state.respuestasA[10].respuesta
+        const respu32=this.state.respuestasA[11].respuesta
+        const respu33=this.state.respuestasA[12].respuesta
+        const respu34=this.state.respuestasA[13].respuesta
+        const respu35=this.state.respuestasA[14].respuesta
+        const respu36=this.state.respuestasA[15].respuesta
+        const respu37=this.state.respuestasA[16].respuesta
+        const respu38=this.state.respuestasA[17].respuesta
+        const respu39=this.state.respuestasA[18].respuesta
 
         return(
             <div className="body">
@@ -71,9 +75,9 @@ class EncAnemia extends Component{
                                             </div>            
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p1a3" className="styled" type="checkbox"   />
-                                                <label for="p1a3">
-                                                {respu23}
-                                                </label>
+                                                    <label for="p1a3">
+                                                    {respu23}
+                                                    </label>
                                             </div>  
                                             ----------------------------------------------------------------------------------
                                             <p><b>¿Sufre de dolores o fatiga muscular?</b></p>
@@ -91,9 +95,9 @@ class EncAnemia extends Component{
                                             </div>            
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p2a3" className="styled" type="checkbox"   />
-                                                <label for="p2a3">
+                                                    <label for="p2a3">
                                                     {respu26}
-                                                </label>
+                                                    </label>
                                             </div>
                                             ---------------------------------------------------------------------------------- 
                                             <p><b>¿Cada cuanto tiempo suele expermientar algun transtorno digestivo?</b></p>
@@ -112,7 +116,7 @@ class EncAnemia extends Component{
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p3a3" className="styled" type="checkbox"   />
                                                 <label for="p3a3">
-                                                    {respu29}
+                                                {respu29}
                                                 </label>
                                             </div>
                                             ---------------------------------------------------------------------------------- 
@@ -130,9 +134,15 @@ class EncAnemia extends Component{
                                                         </label>
                                             </div>
                                             <div className="checkbox checkbox-success checkbox-circle">
+                                                    <input id="p4a4" className="styled" type="checkbox"   />
+                                                        <label for="p4a4">
+                                                        {respu32}
+                                                        </label>
+                                            </div> 
+                                            <div className="checkbox checkbox-success checkbox-circle">
                                                     <input id="p4a3" className="styled" type="checkbox"   />
                                                         <label for="p4a3">
-                                                        {respu32}
+                                                        {respu33}
                                                         </label>
                                             </div> 
                                             ---------------------------------------------------------------------------------- 
@@ -140,43 +150,48 @@ class EncAnemia extends Component{
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p5a1" className="styled" type="checkbox"   />
                                                     <label for="p5a1">
-                                                    {respu33}
+                                                    {respu34}
                                                     </label>
                                                 </div>
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p5a2" className="styled" type="checkbox"   />
                                                     <label for="p5a2">
-                                                    {respu34}
+                                                    {respu35}
                                                     </label>
                                             </div>            
                                             <div className="checkbox checkbox-success checkbox-circle">
                                                 <input id="p5a3" className="styled" type="checkbox"   />
-                                                <label for="p5a3">
-                                                {respu35}
-                                                </label>
+                                                    <label for="p5a3">
+                                                    {respu36}
+                                                    </label>
                                             </div>
                                             ---------------------------------------------------------------------------------- 
                                             <p><b>¿Suele experimentar la sensacion de falta de aire?</b></p>
                                             <div className="checkbox checkbox-success checkbox-circle">
-                                                <input id="p5a1" className="styled" type="checkbox"   />
-                                                    <label for="p5a1">
-                                                    {respu33}
+                                                <input id="p6a1" className="styled" type="checkbox"   />
+                                                    <label for="p6a1">
+                                                    {respu37}
                                                     </label>
                                                 </div>
                                             <div className="checkbox checkbox-success checkbox-circle">
-                                                <input id="p5a2" className="styled" type="checkbox"   />
-                                                    <label for="p5a2">
-                                                    {respu34}
+                                                <input id="p6a2" className="styled" type="checkbox"   />
+                                                    <label for="p6a2">
+                                                    {respu38}
                                                     </label>
                                             </div>            
                                             <div className="checkbox checkbox-success checkbox-circle">
-                                                <input id="p5a3" className="styled" type="checkbox"   />
-                                                <label for="p5a3">
-                                                {respu35}
-                                                </label>
+                                                <input id="p6a3" className="styled" type="checkbox"   />
+                                                    <label for="p6a3">
+                                                    {respu39}
+                                                    </label>
                                             </div>
                                     </div>
-                                </div>       
+                                </div>
+                                <div className="container-login100-form-btn">
+                                <a className="login100-form-btn" href="/Grafica">
+                                Enviar Respuestas 
+                                </a>
+                            </div>           
                         </div>
                     </div>
                 </div>
